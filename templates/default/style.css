@@ -40,26 +40,8 @@ TH {
 TD {
     PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #333; FONT-SIZE: 14px; PADDING-TOP: 0px
 }
-H1 {
-    PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #333; FONT-SIZE: 14px; PADDING-TOP: 0px
-}
-H2 {
-    PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #333; FONT-SIZE: 14px; PADDING-TOP: 0px
-}
-H3 {
-    PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #333; FONT-SIZE: 14px; PADDING-TOP: 0px
-}
-H4 {
-    PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #333; FONT-SIZE: 14px; PADDING-TOP: 0px
-}
-H5 {
-    PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #333; FONT-SIZE: 14px; PADDING-TOP: 0px
-}
-H6 {
-    PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #333; FONT-SIZE: 14px; PADDING-TOP: 0px
-}
 BODY {
-    LINE-HEIGHT: 150%; FONT-STYLE: normal; FONT-FAMILY: Arial; BACKGROUND: url(images/bg.jpg) #fff repeat-x 0px -17px; COLOR: #333333; FONT-SIZE: 14px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+    LINE-HEIGHT: 150%; FONT-STYLE: normal; FONT-FAMILY: Arial; COLOR: #333333; FONT-SIZE: 14px; FONT-WEIGHT: normal; TEXT-DECORATION: none
 }
 A {
     COLOR: #06c; TEXT-DECORATION: none
@@ -482,6 +464,11 @@ H3 A.s-1 {
 .t_partnum {
     TEXT-ALIGN: center; WIDTH: 24px; BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 2px; BACKGROUND-POSITION: 1px 1px; BORDER-TOP: #cccccc 1px solid; DISPLAY: inline-block; PADDING-LEFT: 2px; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; MARGIN: 0px 6px 6px 0px; BORDER-LEFT: #cccccc 1px solid; COLOR: #333333; LINE-HEIGHT: normal; PADDING-TOP: 2px; BORDER-BOTTOM: #999999 1px solid; BACKGROUND-REPEAT: no-repeat; FONT-FAMILY: Tahoma, Arial, Helvetica; WHITE-SPACE: nowrap; BACKGROUND-COLOR: #eeeeee;
 }
-
-
-
+.dt-navbar{background-color: #FFFFFF; border-radius: 0;box-shadow: 0 1px 1px 1px rgba(18,106,211,.08);}
+.dt-navbar-btns{padding-top: 32px;}
+.dt-btn{padding:8px 24px; border-radius: 7px;}
+.dt-side-menu{box-shadow: 0 1px 1px 1px rgba(18,106,211,.08);}
+.dt-menu-item{padding:6px 20px;}
+.dt-menu-item .iconfont{font-size: 20px;}
+.dt-menu-text{display: inline-block; font-size: 22px;}
+.dt-menu-text:before{content: '\2003';}

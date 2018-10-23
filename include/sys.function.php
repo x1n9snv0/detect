@@ -6,8 +6,7 @@
  * Time: 13:22
  */
 
-function chkstr($paravalue, $paratype) //过滤非法字符
-{
+function chkstr($paravalue, $paratype){
     if ($paratype == 1) {
         $filter_str = "(and|or)\\b.+?(>|<|=|in|like)|\\/\\*.+?\\*\\/|<\\s*script\\b|\\bEXEC\\b|UNION.+?SELECT|UPDATE.+?SET|INSERT\\s+INTO.+?VALUES|(SELECT|DELETE).+?FROM|(CREATE|ALTER|DROP|TRUNCATE)\\s+(TABLE|DATABASE)";
         if (preg_match("/" . $filter_str . "/is", $paravalue) == 1) {
@@ -33,8 +32,11 @@ function chkstr($paravalue, $paratype) //过滤非法字符
     return $input_str;
 }
 
-function goto_url($url)
-{
+function goto_url($url){
     echo "<script> location.href='" . $url . "';</script>";
     exit;
+}
+
+function sysmsg($code, $type, $msg){
+    return json_encode(array('code'=>$code, 'type'=>$type, 'msg'=>$msg));
 }

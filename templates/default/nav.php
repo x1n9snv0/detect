@@ -6,22 +6,22 @@
  * Time: 21:02
  */
 ?>
-<div id=head>
-    <div id=logo>
-        <h1><a href="index.php"><img src="templet/101203/images/logo.gif"></a></h1>
-        <P>
-        </P>
+<nav class="navbar dt-navbar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10">
+                <img src="<?php echo $systpl;?>/images/logo_small.png">
+            </div>
+            <div class="col-md-2 container">
+                <div class="row dt-navbar-btns">
+                    <div class="col-md-6">
+                        <button class="btn btn-primary dt-btn pull-right">登录</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-default dt-btn pull-left">注册</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class=clear></div>
-    <div id=menu>
-        <UL class=menu_u>
-            <li><a href="index.php"<?php if($action==""){echo " class='current'";}?>>首 页</a></li>
-            <li><a href="index.php?action=wztj"<?php if($action=="wztj") echo " class='current'";?>>网站统计</a></li>
-            <li><a href="index.php?action=wdtj"<?php if($action=="wdtj") echo " class='current'";?>>网店统计</a></li>
-            <li><a href="index.php?action=tjgg"<?php if($action=="tjgg") echo " class='current'";?>>统计公告</a></li>
-            <li><a href="index.php?action=cjwt"<?php if($action=="cjwt") echo " class='current'";?>>常见问题</a></li>
-            <li><a href="index.php?action=fwtk"<?php if($action=="fwtk") echo " class='current'";?>>服务条款</a></li>
-            <li><a href="index.php?action=lxwm"<?php if($action=="lxwm") echo " class='current'";?>>联系我们</a></li>
-        </UL>
-    </div>
-</div>
+</nav>

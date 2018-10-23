@@ -11,6 +11,19 @@
     <?php @include("templates/default/header.php"); ?>
     <body>
         <?php @include("templates/default/nav.php"); ?>
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 dt-side-menu">
+                    <ul class="dt-menu">
+                        <li class="dt-menu-item">
+                            <i class="iconfont icon-barchart"></i>
+                            <p class="dt-menu-text">统计总览</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
         <div id=webmain>
             <table class=maintable cellSpacing=0 cellPadding=0 border=0>
                 <tbody>
@@ -48,7 +61,7 @@
                             <div class="bk-10"></div>
                         </div>
                         <div class="f-l w-220">
-                            <H2><a class=s-1>最新注册</a>
+                            <H2><a href="?action=user-reg-save" =s-1>最新注册</a>
                                 <div class=bdr-right></div>
                             </H2>
                             <div class=bdr>

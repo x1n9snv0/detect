@@ -22,6 +22,7 @@ if (!$admin) {
 }
 //系统名称
 $systitle = $admin["systitle"];
+$systpl = "templates/" . $admin["systpl"];
 ////背景图片地址
 //$bgimgpath = "templet/default/images/bg" . $rsset["skintype"] . ".gif";
 ////菜单背景图片地址

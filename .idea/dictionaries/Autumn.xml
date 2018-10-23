@@ -1,9 +1,18 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Autumn">
     <words>
+      <w>adminame</w>
       <w>countershow</w>
+      <w>errmsg</w>
+      <w>pagename</w>
       <w>pageurl</w>
+      <w>regadmincheck</w>
       <w>regstate</w>
+      <w>sysmsg</w>
+      <w>systitle</w>
+      <w>systpl</w>
+      <w>usercode</w>
+      <w>userstate</w>
     </words>
   </dictionary>
 </component>
