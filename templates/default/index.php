@@ -49,7 +49,7 @@
         <script type="text/javascript" src="<?php echo $systpl;?>/js/plugin/particles.min.js"></script>
         <script type="text/javascript" src="<?php echo $systpl;?>/js/plugin/app.js"></script>
         <script type="text/javascript">
-            let config = {'base': '/detect/<?php echo $systpl;?>/js/'};
+            let config = {'base': '/detecting/<?php echo $systpl;?>/js/'};
             seajs.config(config).use(['common/ui/LightTip'], function (LightTip) {
                 let username = $("input[name='username']").val();
                 let password = $("input[name='password']").val();
