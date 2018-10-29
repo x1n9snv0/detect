@@ -14,6 +14,8 @@
         <link rel="stylesheet" media="screen" href="<?php echo $systpl;?>/css/style.css">
         <link rel="stylesheet" type="text/css" href="<?php echo $systpl;?>/css/reset.css">
         <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_885783_k2f5gr4zf3.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo $systpl;?>/css/common/ui.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo $systpl;?>/css/animate.css">
         <script type="text/javascript" src="<?php echo $systpl;?>/js/plugin/jquery.js"></script>
         <script type="text/javascript" src="<?php echo $systpl;?>/js/plugin/sea.js"></script>
     </head>
@@ -40,12 +42,14 @@
                 <div class="dt-login-button" id="login">登录</div>
                 <div class="dt-register-button" id="register">注册</div>
             </div>
-            <div class="sk-rotating-plane"></div>
+            <div class="dt-register nodisplay">
+                <!--TODO:Register-->
+            </div>
         </div>
         <script type="text/javascript" src="<?php echo $systpl;?>/js/plugin/particles.min.js"></script>
         <script type="text/javascript" src="<?php echo $systpl;?>/js/plugin/app.js"></script>
         <script type="text/javascript">
-            let config = {'base': '/detecting/<?php echo $systpl;?>/js/'};
+            let config = {'base': '/detect/<?php echo $systpl;?>/js/'};
             seajs.config(config).use(['common/ui/LightTip'], function (LightTip) {
                 let username = $("input[name='username']").val();
                 let password = $("input[name='password']").val();
@@ -55,10 +59,13 @@
                         data: {"username": username, "password": password, "cookies_time": 3600},
                         success :function (data) {
                             if (data.code !== 0){
-                                $.lightTip.error(data.type+": "+data.msg);
+                                $.lightTip.error(data.msg);
+                                if (data.code === 1){$("input[name='username']").addClass("animated shake")}
+                                if (data.code === 2){$("input[name='username']").addClass("animated shake");$("input[name='password']").addClass("animated shake");}
+                                if (data.code === 3){$("input[name='username']").addClass("animated swing")}
                             } else{
                                 $.lightTip.success(data.msg);
-                                $(location).attr('href', 'user.php');
+                                setTimeout("$(location).attr('href', 'user.php')", 3000);
                             }
                         }
                     })

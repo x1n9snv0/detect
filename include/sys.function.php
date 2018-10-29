@@ -38,5 +38,6 @@ function goto_url($url){
 }
 
 function sysmsg($code, $type, $msg){
+    header('Content-Type:application/json');
     return json_encode(array('code'=>$code, 'type'=>$type, 'msg'=>$msg));
 }

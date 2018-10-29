@@ -12,10 +12,9 @@ if ($action == "user-name-check"){
     $result = $db->query($sql);
     $rs = mysqli_fetch_row($result);
     if ($rs[0] > 0){
-        echo sysmsg(1,'error','用户名'.$username.'已存在');
-        return;
+        exit(sysmsg(1,'error','用户名'.$username.'已存在'));
     }else{
-        echo sysmsg(0, 'success', '用户名'.$username.'可注册');
+        exit(sysmsg(0, 'success', '用户名'.$username.'可注册'));
     }
 }
 if ($action == "user-reg-save"){
