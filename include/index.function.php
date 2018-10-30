@@ -19,22 +19,21 @@ if ($action == "user-name-check"){
 }
 if ($action == "user-reg-save"){
     $username = chkstr($_POST["username"],1);
-    $password1 = chkstr($_POST["password1"],1);
-    $password2 = chkstr($_POST["password2"],1);
+    $password = chkstr($_POST["password"],1);
     $email = chkstr($_POST["email"],1);
     $phone = chkstr($_POST["phone"],1);
     $website = chkstr($_POST["website"],1);
     $pageurl = chkstr($_POST["pageurl"],1);
     $countershow = chkstr($_POST["countershow"], 1);
     if ($admin["regstate"] == 0){
-        exit(sysmsg(2, 'error', '系统禁止新用户注册'));
+        exit(sysmsg(1, 'error', '系统禁止新用户注册'));
     }
     if ($admin["regadmincheck"] == 0){
         $userstate = 1;
     }else{
         $userstate = 0;
     }
-    $sql = "insert into dt_user (username, pwd, pwd_view, email, phone, website, pageurl, adddate, countershow, userstate, otherset, usercode) values ('$username', '$password1', '$password2', '$email', '$phone', '$website', '$pageurl', '" . date("Y-m-d") . "', '$countershow', '$userstate', '', '" . md5("1" . $username . $password1) . "')";
+    $sql = "insert into dt_user (username, pwd, pwd_view, email, phone, website, pageurl, adddate, countershow, userstate, otherset, usercode) values ('$username', '$password', '$password', '$email', '$phone', '$website', '$pageurl', '" . date("Y-m-d") . "', '$countershow', '$userstate', '', '" . md5("1" . $username . $password1) . "')";
     $db->query($sql);
     if ($admin["regadmincheck"] == 0) {
         $_SESSION["dt_user"] = $username;

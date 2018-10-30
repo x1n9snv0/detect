@@ -43,6 +43,9 @@
                 <div class="dt-register-button" id="register">注册</div>
             </div>
             <div class="dt-register nodisplay">
+                <div class="dt-register-top">
+                    <img src="<?php echo $systpl;?>/images/dt-login.png">
+                </div>
                 <!--TODO:Register-->
             </div>
         </div>
